@@ -1,0 +1,58 @@
+include ../partials/section.jade
+include ../partials/table.jade
+include ../partials/media.jade
+include ../partials/button.jade
+
+//include ../partials/grid.jade
+extends ../templates/default.jade
+
+block content
+  +section
+    +table(width=500).responsive-table
+      +row-column
+        +table
+          +row-column(align="center").heading Resources for learning more
+      +row-column    
+        +table
+          +row
+            +column(valign="top").p-xl-t.mobile-hide
+              a(href="#" target="_blank")
+                +image(src="../img/litmus-logo.jpg")
+            +column.p-xl-t(width="100%")
+              +table
+                +row-column.p-md-h.small Octabrain Community
+                +row-column.p-md-h.p-xs-v.subheading O C T A B R A I N
+                +row-column.p-md-h.p-sm-b Octabrain Community
+                +row-column.p-md-h
+                  +button(href="#" align="left").small Learn How &rarr;  
+  +section(bg="#eee")
+    +table(width=500).responsive-table
+      +row-column
+        +table
+          +row-column(align="center").heading How does it work?
+          +row-column(align="center").p-sm-h.lead Responsive email works on the same principles as RWD:
+      +row-column
+        +table-row-column(valign="top").mobile-wrapper
+          +table(width="47%" align="left").responsive-table
+            +row-column.p-md-b
+              +table
+                +row-column(align="center" valign="middle")
+                  a(href="http://alistapart.com/article/can-email-be-responsive/" target="_blank")
+                    +image(src="../img/fluid-images.jpg" width="240" height="130").img-max
+                +row-column(align="center").p-md-t.subheading Fluid Images
+                +row-column(align="center")
+                  span.appleBody max-width: 100% 
+                  span is your friend, just like on the web.
+          +table(width="47%" align="right").responsive-table
+            +row-column.p-md-b
+              +table
+                +row-column(align="center" valign="middle")
+                  a(href="http://alistapart.com/article/can-email-be-responsive/" target="_blank")
+                    +image(src="../img/fluid-structure.jpg" width="240" height="130").img-max
+                +row-column(align="center").p-md-t.subheading Fluid Structure
+                +row-column(align="center")
+                  span.appleBody You can use percentage-based tables, too. Don&rsquo;t touch ems, though.
+      +row-column
+        +table
+          +row-column(align="center").p-sm-t
+            +button(href="#") Learn How &rarr;

@@ -1,0 +1,30 @@
+{
+  "name": "email-template",
+  "version": "1.0.0",
+  "description": "## A responsive email template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodriguezcommaj/salted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodriguezcommaj/salted/issues"
+  },
+  "homepage": "https://github.com/rodriguezcommaj/salted#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.2.2",
+    "jade": "^1.11.0",
+    "jstransformer-less": "^2.1.0",
+    "less": "^2.7.1",
+    "through2": "^2.0.1"
+  }
+}

@@ -1,0 +1,28 @@
+
+mixin table
+  table(border="0" cellpadding="0" cellspacing="0" width="100%")&attributes(attributes)
+    block
+
+mixin row
+  tr
+    block
+    
+mixin column
+  td&attributes(attributes).text
+    block
+    
+mixin table-row
+  +table&attributes(attributes)
+    +row
+      block
+      
+mixin table-row-column
+  +table
+    +row
+      +column&attributes(attributes)
+        block
+        
+mixin row-column
+  +row
+    +column&attributes(attributes)
+      block

@@ -1,31 +1,28 @@
-include ../partials/section.jade
+include ../partials/blocks.jade
 include ../partials/table.jade
 include ../partials/media.jade
 include ../partials/button.jade
 
-//include ../partials/grid.jade
 extends ../templates/default.jade
 
 block content
+  +section.p-no-a.header
+    +table(bgcolor="#000", width=500).responsive-table
+      +row-column
+        +table-row
+            +column(valign="middle").p-xs-a.p-sm-l
+              +link
+                +image(src="../img/logo-small.png")
+            +column(valign="middle" width="100%").logo-text.heading.p-sm-a O C T A B R A I N
   +section
     +table(width=500).responsive-table
       +row-column
         +table
-          +row-column(align="center").heading Resources for learning more
-      +row-column    
-        +table
-          +row
-            +column(valign="top").p-xl-t.mobile-hide
-              a(href="#" target="_blank")
-                +image(src="../img/litmus-logo.jpg")
-            +column.p-xl-t(width="100%")
-              +table
-                +row-column.p-md-h.small Octabrain Community
-                +row-column.p-md-h.p-xs-v.subheading O C T A B R A I N
-                +row-column.p-md-h.p-sm-b Octabrain Community
-                +row-column.p-md-h
-                  +button(href="#" align="left").small Learn How &rarr;  
-  +section(bg="#eee")
+          +row-column(align="center").heading.p-sm-v Mail Freedom
+          +row-column(align="center").subheading Fresh flexible email template
+          +row-column(align="center").p-lg-t
+            +image(src="../img/logo-huge.png")
+  +section(bg="#f8f8f8")
     +table(width=500).responsive-table
       +row-column
         +table
@@ -37,22 +34,40 @@ block content
             +row-column.p-md-b
               +table
                 +row-column(align="center" valign="middle")
-                  a(href="http://alistapart.com/article/can-email-be-responsive/" target="_blank")
+                  +link
                     +image(src="../img/fluid-images.jpg" width="240" height="130").img-max
                 +row-column(align="center").p-md-t.subheading Fluid Images
                 +row-column(align="center")
-                  span.appleBody max-width: 100% 
-                  span is your friend, just like on the web.
+                  +text.appleBody max-width: 100% 
+                  +text is your friend, just like on the web.
           +table(width="47%" align="right").responsive-table
             +row-column.p-md-b
               +table
                 +row-column(align="center" valign="middle")
-                  a(href="http://alistapart.com/article/can-email-be-responsive/" target="_blank")
+                  +link
                     +image(src="../img/fluid-structure.jpg" width="240" height="130").img-max
                 +row-column(align="center").p-md-t.subheading Fluid Structure
                 +row-column(align="center")
-                  span.appleBody You can use percentage-based tables, too. Don&rsquo;t touch ems, though.
+                  +text.appleBody You can use percentage-based tables, too. Don&rsquo;t touch ems, though.
+      +row-column
+        +table-row-column(align="center").p-sm-t
+            +button(href="#") Learn How &rarr;
+  +section
+    +table(width=500).responsive-table
       +row-column
         +table
-          +row-column(align="center").p-sm-t
-            +button(href="#") Learn How &rarr;
+          +row-column(align="center").heading How does it work?
+          +row-column(align="center").p-sm-h.lead Responsive email works on the same principles as RWD:
+        +table    
+          +row-column
+            +table-row
+                +column(valign="top").p-md-t.mobile-hide
+                  +link
+                    +image(src="../img/logo.png")
+                +column(valign="top" width="100%").p-md-t
+                  +table
+                    +row-column.p-md-h.small Octabrain Community
+                    +row-column.p-md-h.p-xs-v.subheading O C T A B R A I N
+                    +row-column.p-md-h.p-sm-b Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                    +row-column.p-md-h
+                      +button(href="#" align="left").button-sm.button-primary Get more

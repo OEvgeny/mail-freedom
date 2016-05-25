@@ -1,0 +1,28 @@
+.padding (@name, @value) {
+  .p-@{name}-a { padding: @value; }
+  .p-@{name}-h { padding-left: @value; padding-right: @value; }
+  .p-@{name}-v { padding-top: @value; padding-bottom: @value; }
+  .p-@{name}-t { padding-top: @value; }
+  .p-@{name}-r { padding-right: @value; }
+  .p-@{name}-b { padding-bottom: @value; }
+  .p-@{name}-l { padding-left: @value; }
+}
+
+.for (@list, @code) {
+  & {
+    .loop(@i:1) when (@i =< length(@list)) {
+      @value: extract(@list, @i);
+      @code();
+      .loop(@i + 1);
+    }
+    .loop();
+  }
+}
+
+.import-components (@components) {
+  .for(@components, { @import './components/@{value}'; });
+}
+
+.components-style (@components, @style) {
+  .for(@components, {});
+}

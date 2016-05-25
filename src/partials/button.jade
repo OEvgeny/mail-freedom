@@ -1,7 +1,8 @@
 import ./table.jade
+import ./blocks.jade
 
 mixin button
-  +table-row-column(align="center").padding-copy
+  +table-row-column(align="center")
     +table-row-column(align=attributes.align || "center")
-      a&attributes(attributes).mobile-button.button
+      +link&attributes(attributes).button
         block

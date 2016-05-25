@@ -1,0 +1,13 @@
+include ./table.jade
+
+mixin section
+  +table-row-column(bgcolor=attributes.bg || "#fff", align="center")&attributes(attributes).section
+    block
+  
+mixin link
+  a(href="#" target="_blank")&attributes(attributes).text
+    block
+
+mixin text
+  span&attributes(attributes).text
+    block

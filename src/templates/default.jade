@@ -4,7 +4,9 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width")
     style(type="text/css")
-      include:less ../less/style.less
+      include:less ../less/main.less
+    if (!locals.production)
+      link(rel="stylesheet" href=locals.styleLink)
     block title
       title Default title
   body

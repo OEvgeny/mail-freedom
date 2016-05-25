@@ -1,0 +1,38 @@
+
+.button-main () {
+  .button {
+    text-align: center;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: @button-text;
+    text-decoration: none;
+    background-color: @button-default;
+    border-top: 15px solid @button-default;
+    border-bottom: 15px solid @button-default;
+    border-left: 25px solid @button-default;
+    border-right: 25px solid @button-default;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    display: inline-block;
+    box-shadow: fade(darken(@button-default, 30%), 35%) 0 3px 10px 0;
+
+    &.button-primary {
+      box-shadow: fade(@button-primary, 28%) 0 3px 10px 0;
+      background-color: @button-primary;
+      border-color: @button-primary;
+    }
+
+    &.button-sm {
+      border-top-width: 10px;
+      border-bottom-width: 10px;
+      border-left-width: 12px;
+      border-right-width: 12px;
+    }
+  }
+}
+
+.button-mobile () {
+
+}
